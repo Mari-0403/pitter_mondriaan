@@ -1,0 +1,98 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html {
+  background-color: #000;
+  block-size: 100vh;
+}
+
+:root {
+  --red: #DF301F;
+  --blue: #1E5DA2;
+  --white: #fff;
+  --gray: #D9D9D9;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  block-size: 100%;
+}
+
+.canvas {
+  background-color: #000;
+  margin: auto;
+  inline-size: 512px;
+  block-size: 512px;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 109px 323px 40px;
+  grid-template-rows: 155px 190px repeat(2, 54px);
+}
+
+.small_rectangle {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+.medium_rectangle {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+}
+
+.large_rectangle {
+  grid-column: 2 / -2;
+  grid-row: -3 / -1;
+}
+
+.big_square {
+  background-color: var(--red);
+  grid-column: 2 / -1;
+  grid-row: 1 / -3;
+}
+
+.medium_square {
+  background-color: var(--blue);
+  grid-column: 1 / 2;
+  grid-row: -3 / -1;
+}
+
+.small_square {
+  background-color: var(--white);
+  grid-column: -2 / -1;
+}
+
+.decore {
+  inline-size: 50%;
+  block-size: 100%;
+}
+
+.rectangle {
+  background-color: var(--white);
+}
+
+.accent_color {
+  background-color: var(--gray);
+}
+
+.button {
+  background-color: var(--blue);
+  border: 1px var(--white) solid;
+  inline-size: 150px;
+  block-size: 50px;
+  margin: auto;
+}
+
+.button_link {
+  color: var(--white);
+  text-decoration: none;
+  font-size: 25px;
+  display: grid;
+  place-items: center;
+  inline-size: 100%;
+  block-size: 100%;
+}

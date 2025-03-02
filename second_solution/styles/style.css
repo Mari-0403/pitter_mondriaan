@@ -1,0 +1,103 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html {
+  background-color: #000;
+  block-size: 100vh;
+}
+
+:root {
+  --red: #DF301F;
+  --blue: #1E5DA2;
+  --white: #fff;
+  --gray: #D9D9D9;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  block-size: 100%;
+}
+
+.canvas {
+  background-color: #000;
+  margin: auto;
+  inline-size: 512px;
+  block-size: 512px;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 109px 323px 40px;
+  grid-template-rows: 155px 190px repeat(2, 54px);
+  grid-template-areas: 
+    "S_rectangle B_square B_square"
+    "M_rectangle B_square B_square"
+    "M_square L_rectangle S_square"
+    "M_square L_rectangle S_accent_square"
+  ;
+}
+
+.small_rectangle {
+  grid-area: S_rectangle;
+}
+
+.medium_rectangle {
+  grid-area: M_rectangle;
+}
+
+.large_rectangle {
+  grid-area: L_rectangle;
+}
+
+.big_square {
+  grid-area: B_square;
+  background-color: var(--red);
+}
+
+.medium_square {
+  grid-area: M_square;
+  background-color: var(--blue);
+}
+
+.small_square {
+  grid-area: S_square;
+  background-color: var(--white);
+}
+
+.accent_small_square {
+  grid-area: S_accent_square;
+}
+
+.decore {
+  inline-size: 50%;
+  block-size: 100%;
+}
+
+.rectangle {
+  background-color: var(--white);
+}
+
+.accent_color {
+  background-color: var(--gray);
+}
+
+.button {
+  background-color: var(--red);
+  border: 1px var(--white) solid;
+  inline-size: 150px;
+  block-size: 50px;
+  margin: auto;
+}
+
+.button_link {
+  color: var(--white);
+  text-decoration: none;
+  font-size: 25px;
+  display: grid;
+  place-items: center;
+  inline-size: 100%;
+  block-size: 100%;
+}
